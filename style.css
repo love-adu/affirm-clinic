@@ -1,0 +1,99 @@
+/* GLOBAL THEME — matches your screenshot */
+:root {
+  --gradient: linear-gradient(180deg, #a238ff, #d85fff, #ff7ab8);
+  --dark: #1a1a1a;
+  --light: #ffffff;
+  --text: #222;
+  --muted: #555;
+  --accent: #8a3ffc;
+  --radius: 14px;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", sans-serif;
+  margin: 0;
+  background: #fafafa;
+  color: var(--text);
+}
+
+/* HEADER / NAV */
+header {
+  background: var(--gradient);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+nav {
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+}
+
+/* HERO */
+.hero {
+  background: var(--gradient);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* CARDS */
+.section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* FORMS */
+input, textarea, select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.8rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+/* CALENDAR */
+.calendar {
+  margin-top: 1rem;
+  border-radius: var(--radius);
+  background: white;
+}

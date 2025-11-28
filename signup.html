@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up | AFFIRM Clinic</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<header>
+  <h1>Clinic Intake & Appointment Scheduling</h1>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="members.html">Members</a>
+  <a href="signup.html">Sign Up</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<body>
+
+<section class="section">
+
+  <div class="card">
+    <h2>Intake Form</h2>
+    <form>
+      <label>Chosen Name</label>
+      <input type="text" placeholder="Your name">
+
+      <label>Email</label>
+      <input type="email" placeholder="you@berkeley.edu">
+
+      <label>Service Needed</label>
+      <select>
+        <option>Name Change Research</option>
+        <option>Gender Marker Change Research</option>
+        <option>General Support</option>
+      </select>
+
+      <label>Notes</label>
+      <textarea placeholder="Tell us anything you'd like us to know."></textarea>
+
+      <button>Submit Intake</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Available Appointment Dates</h2>
+    <div id="calendar" class="calendar"></div>
+  </div>
+
+</section>
+
+<script>
+  // Simple interactive calendar
+  const today = new Date();
+  let html = "<h3>" + today.toLocaleString('default', { month: 'long' }) +
+             " " + today.getFullYear() + "</h3>";
+  html += "<table><tr>";
+
+  for (let i = 1; i <= 30; i++) {
+    html += `<td style="padding:10px;border:1px solid #eee;cursor:pointer"
+                 onclick="alert('You selected ${i}')">${i}</td>`;
+    if (i % 7 === 0) html += "</tr><tr>";
+  }
+  html += "</tr></table>";
+
+  document.getElementById("calendar").innerHTML = html;
+</script>
+
+</body>
+</html>
